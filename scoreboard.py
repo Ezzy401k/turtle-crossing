@@ -24,3 +24,9 @@ class ScoreBoard(turtle.Turtle):
         # Increase the score by 1 and update the score display
         self.score_point += 1  # Increment the score
         self.update_score()  # Update the score display
+
+    # Write "Game Over!" on the screen at the center, using Arial font, size 24, and normal style
+    def game(self):
+        self.goto(0, 0)
+        self.write(f"Game Over: Your score is {self.score_point}", False, "center", ("Arial", 24,
+                                                                                     "normal"))

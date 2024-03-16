@@ -3,7 +3,7 @@ import time
 import player
 import car_manager
 import scoreboard
-import gameover
+
 
 # Set up the screen
 screen = turtle.Screen()
@@ -32,7 +32,7 @@ while game_is_on:
     for cars in car.all_cars:
         if player.distance(cars) < 20:
             game_is_on = False  # End the game if there's a collision
-            game = gameover.GameOver()  # Display game over message
+            score.game()  # Display game over message
 
     # Check if the player has reached the finish line
     if player.ycor() == 280:
